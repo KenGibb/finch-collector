@@ -11,6 +11,10 @@
             {% else %}
                 <p>Age: Baby</p>
             {% endif %}
+            <div class="card-action">
+                <a href="{% url 'finches_update' finch.id%}">Edit da birdy</a>
+                <a href="{% url 'finches_delete' finch.id%}">Delete da birdy</a>
+            </div>
         </div>
     </div>
 {% endblock %}
