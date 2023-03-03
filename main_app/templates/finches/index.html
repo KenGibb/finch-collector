@@ -6,13 +6,14 @@
         <div class="card">
             <div class="card-content">
                 <span class="card-title">{{ finch.name }}</span>
-                <p>Species: {{ cat.species }}</p>
-                <p>Description: {{ species.description }}</p>
+                <p>Species: {{ finch.species }}</p>
+                <p>Description: {{ finch.description }}</p>
                 {% if finch.age > 0 %}
                     <p>Age: {{ finch.age }}</p>
                 {% else %}
                     <p>Age: Baby</p>
                 {% endif %}
+                <a href="{% url 'detail' finch.id %}">Look at {{ finch.age }} year old {{ finch.name }}'s details</a>
             </div>
         </div>
     {% endfor %}
